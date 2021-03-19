@@ -1,0 +1,27 @@
+
+/* .box-one{
+  position:  relative;
+  left:90%;
+} */
+
+
+.gird {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 2fr 2fr ;
+  height: 100vh;
+  margin: 2em;
+}
+
+#section2{
+  background-color: #c2975a;
+  color: #E8E8E8;
+  text-align: center;
+
+
+}
+
+footer{
+  background-color: black;
+  height:150px;
+}

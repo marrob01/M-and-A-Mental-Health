@@ -1,0 +1,30 @@
+{
+  "name": "M-and-A-Mental-Health",
+  "version": "1.0.0",
+  "description": "Unit Two Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marrob01/M-and-A-Mental-Health.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marrob01/M-and-A-Mental-Health/issues"
+  },
+  "homepage": "https://github.com/marrob01/M-and-A-Mental-Health#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.0"
+  }
+}
