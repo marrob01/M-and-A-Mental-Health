@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Health Check</title>
+  </head>
+  <body>
+
+    <form action="/healthform" method="POST">
+      <fieldset>
+        <legend>How Do You Feel Today</legend>
+          <input type="radio" id="excellent" name="tip1" value="excellent" >
+          <label for="excellent">Excellent</label><br>
+
+          <input type="radio" id="better" name="tip1" value="better" >
+          <label for="better">Could Be Better</label><br>
+
+          <input type="radio" id="bad" name="tip1" value="bad" >
+          <label for="bad">Bad</label><br>
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend>How Was Your Day Yesterday</legend>
+          <input type="radio" id="busy" name="tip2" value="busy" >
+          <label for="busy">Busy</label><br>
+
+          <input type="radio" id="productive" name="tip2" value="productive" >
+          <label for="productive">Productive</label><br>
+
+          <input type="radio" id="overwhelming" name="tip2" value="overwhelming" >
+          <label for="overwhelming">Overwhelming</label><br>
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend>What Can Be <br>Done Different Today</legend>
+          <input type="radio" id="attitude" name="tip3" value="attitude" >
+          <label for="attitude">My Attitude</label><br>
+
+          <input type="radio" id="help" name="tip3" value="help" >
+          <label for="help">Accept Help</label><br>
+
+          <input type="radio" id="slow" name="tip3" value="slow" >
+          <label for="slow">Take It Slow</label><br>
+
+
+
+      </fieldset>
+
+      <input type="submit" value="Submit" />
+
+
+    </form>
+
+
+  </body>
+</html>

@@ -5,14 +5,52 @@
 } */
 
 
-.gird {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  grid-template-rows: 2fr 2fr ;
+  grid-template-columns: 2.5fr 2fr ;
+  grid-template-rows: 2.5fr 2fr  ;
+  grid-template-areas:
+  "img1  about"
+  "img2  img3";
   height: 100vh;
   margin: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  width:50%;
+  align-items: center;
+  align-self:   center;
+
 }
 
+.grid figure{
+  text-align: center;
+}
+
+.more-ma, .more-ma img {
+  grid-area: img1;
+  border-radius: 20px;
+}
+img{
+  box-shadow: gray 0 0  20px;
+  border: 1px solid white;
+
+}
+.about, .about img{
+  grid-area: about;
+  border-radius: 20px;
+
+}
+.genral-problem, .genral-problem img{
+  grid-area: img2;
+  border-radius: 20px;
+
+}
+.can-do, .can-do img{
+  grid-area: img3;
+  border-radius: 20px;
+
+}
 #section2{
   background-color: #c2975a;
   color: #E8E8E8;

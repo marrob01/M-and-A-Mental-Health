@@ -1,0 +1,23 @@
+#exe-btn{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.exe-btns{
+    margin:20px;
+}
+
+
+#exe-ul{
+  list-style-type: none;
+  padding: 30px;
+}
+
+.exe-li{
+  border: 1px solid blue;
+  margin-bottom: 10px;
+}

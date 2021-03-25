@@ -8,6 +8,8 @@ const session = require('express-session');
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
+const Exercise = require('./models/exercies.js')
+const exercises = require('./models/seedexe.js')
 
 const mongoose = require('mongoose');
 
@@ -34,25 +36,50 @@ app.use(express.static('public'));
 
 app.use(session({
     secret: process.env.SECRET,
-    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
-    saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
+    resave: false,
+    saveUninitialized: false
 }))
+
+// Exercise.create( exercises, ( err , data ) => {
+//       if ( err ) console.log ( err.message )
+//   console.log( "added provided exercises data" )
+//   }
+// );
+
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+        return next()
+    } else {
+        res.redirect('/sessions/new')
+    }
+}
+
+app.use((req, res, next) =>{
+  res.locals.currentUser = req.session.currentUser
+  next()
+})
+
+
+
+const exerciesController = require('./controller/exercies.js');
+app.use('/exercies', exerciesController);
+
+const userController = require('./controller/users.js');
+app.use('/users',isAuthenticated, userController);
+
+const sessionsControllers = require('./controller/sessions')
+app.use('/sessions', sessionsControllers);
+
+const confirmControllers = require('./controller/confirmation.js')
+app.use('/confirmation', confirmControllers);
+
+const healthformControllers = require('./controller/healthform.js')
+app.use('/healthform', healthformControllers);
 
 app.get('/', (req, res) => {
     res.render('home.ejs')
 
 })
-
-app.get('/about', (req, res) => {
-    res.render('about.ejs')
-
-})
-// app.get('/', (req, res) => {
-//     res.render('home.ejs', {
-//         currentUser: req.session.currentUser
-//     })
-// })
-
 
 app.listen(PORT,()=>{
     console.log('Server is listening!!!');

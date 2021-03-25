@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleExeHome.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <title> Health Exercies</title>
+  </head>
+  <body>
+
+    <%- include ('./partials/head.ejs') %>
+    <%- include ('./partials/header.ejs') %>
+
+
+
+    <div id="exe-btn">
+      <button class="exe-btns" type="button" name="button"><a href="/exercies/new">Add New Exercise</a></button>
+      <button class="exe-btns" id="delete" onclick="myFunction()">Delete</button>
+
+    </div>
+
+    <ul id="exe-ul">
+        <% for(let i = 0; i < practice.length; i++) { %>
+          <li class="exe-li"><a href="/exercies/<%=practice[i].id%>">
+            <h3>1- <%= practice[i].name %></h3><br>
+            <%= practice[i].Description %><br>
+            <%= practice[i].daily %><br>
+            <a href="/exercies/<%=practice[i].id%>/edit">Edit</a>
+            <form method="POST" action="/exercies/<%= practice[i].id %>?_method=DELETE">
+                <button class="delete-control">Delete</button>
+            </form>
+          </a></li>
+
+        <% } %>
+    </ul>
+
+
+    <script src="/exercise.js"></script>
+
+
+  </body>
+</html>

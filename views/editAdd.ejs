@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h4>Edit<%= exerciseEdit.name %> </h4>
+  <form method="POST" action="/exercies/<%= exerciseEdit.id %>?_method=PUT">
+    <!-- NOTE: the form is pre-populated with values from the server  -->
+
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%=exerciseEdit.name%>" />
+
+    <label for="Description">Description</label>
+    <input type="text" name="Description" value="<%=exerciseEdit.Description%>" />
+
+
+
+    <label for="daily">Daily</label>
+    <input type="text" name="daily" value="<%=exerciseEdit.daily%>" />
+
+    <br>
+    <br>
+
+    <input type="submit" name="" value="Submit Changes"/>
+    </form>
+
+  </body>
+</html>

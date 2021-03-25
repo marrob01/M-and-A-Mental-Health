@@ -2,10 +2,27 @@
   <div class="logo"><a href ="/">
     Logo
   </a></div>
+
   <ul class="links">
-    <li><a href="/">About</li>
-    <li><a href="/">Exercises</a></li>
-    <li><a href ="/">Home</a></li>
-    <li><a href ="/">Sign In</a></li>
+
+    <% if (currentUser) { %>
+      <li><a href="/healthform/form1">Daily Check</a></li>
+      <li><a href="/exercies">Exercises</a></li>
+      <li><a href ="/">Home</a></li>
+      <li>Welcome <%= currentUser.username%> </li>
+      <li>
+        <form action="/sessions?_method=DELETE" method="POST">
+              <button>Log out</button>
+        </form>
+      </li>
+
+    <% } else { %>
+
+      <li><a href="/exercies">Exercises</a></li>
+      <li><a href ="/">Home</a></li>
+      <li><a href ="/users/new">Sign Up</a></li>
+
+    <% } %>
+
   </ul>
 </nav>
