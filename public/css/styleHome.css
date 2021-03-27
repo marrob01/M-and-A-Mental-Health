@@ -1,9 +1,4 @@
 
-/* .box-one{
-  position:  relative;
-  left:90%;
-} */
-
 
 .grid {
   display: grid;
@@ -34,6 +29,7 @@
 img{
   box-shadow: gray 0 0  20px;
   border: 1px solid white;
+  height: 300px;
 
 }
 .about, .about img{
@@ -41,6 +37,7 @@ img{
   border-radius: 20px;
 
 }
+
 .genral-problem, .genral-problem img{
   grid-area: img2;
   border-radius: 20px;
@@ -61,5 +58,7 @@ img{
 
 footer{
   background-color: black;
-  height:150px;
+  height:50px;
+  color: white;
+  text-align: center;
 }

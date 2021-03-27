@@ -2,29 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
     <title></title>
   </head>
   <body>
 
+    <%- include ('../partials/head.ejs') %>
+    <%- include ('../partials/header.ejs') %>
+
     <form action="/users" method="POST">
+      <fieldset>
+        <legend>New User</legend>
 
-            <label>
-                <span>username:</span>
-                <input type="text" name="username" />
-            </label>
+        <label>
+            <label for="name">Username</label>
+            <input type="text" name="username" />
+        </label>
 
-            <label>
-                <span>Email:</span>
-                <input type="text" name="email" />
-            </label>
+        <label>
+            <label for="email">Email</label>
+            <input type="text" name="email" />
+        </label>
 
-            <label>
-                <span>password:</span>
-                <input type="password" name="password" />
-            </label>
-            <br>
-            <br>
-            <input type="submit" value="Create User" />
+        <label>
+            <label for="password">Password</label>
+            <input type="password" name="password" />
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="Create User" />
+        <a href="/sessions/new"><button type="button" >Log In</button></a>
+
+      </fieldset>
+
         </form>
 
 

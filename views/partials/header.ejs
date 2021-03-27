@@ -6,10 +6,10 @@
   <ul class="links">
 
     <% if (currentUser) { %>
-      <li><a href="/healthform/form1">Daily Check</a></li>
-      <li><a href="/exercies">Exercises</a></li>
-      <li><a href ="/">Home</a></li>
-      <li>Welcome <%= currentUser.username%> </li>
+      <li><a href="/healthform/form1">Daily Check</a></li><hr>
+      <li><a href="/exercies">Exercises</a></li><hr>
+      <li><a href ="/">Home</a></li><hr>
+      <li>Welcome <%= currentUser.username%> </li><hr>
       <li>
         <form action="/sessions?_method=DELETE" method="POST">
               <button>Log out</button>
@@ -18,9 +18,9 @@
 
     <% } else { %>
 
-      <li><a href="/exercies">Exercises</a></li>
-      <li><a href ="/">Home</a></li>
-      <li><a href ="/users/new">Sign Up</a></li>
+      <li><a href="/exercies">Exercises</a></li><hr>
+      <li><a href ="/">Home</a></li><hr>
+      <li><a href ="/users/new">Sign Up</a></li><hr>
 
     <% } %>
 

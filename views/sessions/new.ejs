@@ -2,24 +2,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
     <title></title>
   </head>
   <body>
 
+    <%- include ('../partials/head.ejs') %>
+    <%- include ('../partials/header.ejs') %>
+
     <form action="/sessions" method="POST">
+      <fieldset>
+        <legend>Login</legend>
 
         <label>
-            <span>username:</span>
+            <label for="username">Username</label>
             <input type="text" name="username" />
         </label>
 
         <label>
-            <span>password:</span>
+            <label for="password">Password</label>
             <input type="password" name="password" />
         </label>
         <br>
         <br>
         <input type="submit" value="login user" />
+        <a href="/users/new"><button type="button" >Sign Up</button></a>
+      </fieldset>
+
+
     </form>
   </body>
 </html>

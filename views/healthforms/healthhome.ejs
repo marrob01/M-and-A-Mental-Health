@@ -4,16 +4,65 @@
     <meta charset="utf-8">
     <title>Health Check</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleHealth.css">
   </head>
   <body>
     <%- include ('../partials/head.ejs') %>
     <%- include ('../partials/header.ejs') %>
 
+    <section class="sec" id="sec-1">
 
-    <h3><%= one.tip1 %></h1>
-    <h3><%= one.tip2 %></h1>
-    <h3><%= one.tip3 %></h1>
+      <%if (one.tip1=== "excellent") {%>
+        <h3>Today you are feeling <%= one.tip1 %>.</h3>
+        <h3>- Keep being positive! Try doing something you like or are intersted in to keep that good vibe.</h3>
 
+      <%}else if(one.tip1=== "better") {%>
+        <h3>Feeling So-So.</h1>
+        <h3>- Not feeling good today? Remember to speak up and let others know. Closed mouths don't get fed.</h3>
+
+      <%}else if(one.tip1=== "bad") {%>
+        <h3>Today you are feeling <%= one.tip1 %>.</h1>
+        <h3>- Not having a good day at all? Remember to speak up and take time to yourself. Take deep breaths and remember to relax!</h3>
+
+
+
+      <%}%>
+
+    </section>
+    <section class="sec" id="sec-2" >
+
+      <%if (one.tip2=== "busy") {%>
+        <h3>Yesterday was a bit <%= one.tip2 %> for you.</h3>
+        <h3>- You probably had a bit to do yesterday, remember to take mental breaks so you can have a productive day! </h3>
+
+      <%}else if(one.tip2=== "productive") {%>
+        <h3>Feeling <%= one.tip2 %>? </h1>
+        <h3>- Well today will be the same, contiune to take today step by step and take breaks!</h3>
+
+      <%}else if(one.tip2=== "overwhelming") {%>
+        <h3>Yesterday you felt overwhelemd</h1>
+        <h3>- Taking on to much isn't always good, try handling what you can do versus what others ask today.</h3>
+
+      <%}%>
+
+    </section>
+    <section class="sec" id="sec-3">
+
+      <%if (one.tip3=== "attitude") {%>
+        <h3>Ask yourself were you kind?</h3>
+        <h3>- Kindness always responds with kindness, by kind to others and a good day will follow.</h3>
+
+      <%}else if(one.tip3=== "help") {%>
+        <h3>Just like helping others, accepting help is better</h1>
+        <h3>- Take help on something you're stuck on. </h3>
+
+      <%}else if(one.tip3=== "slow") {%>
+        <h3>Taking it  <%= one.tip3 %> is a good thing</h1>
+        <h3>- Nothing is wrong with taking it slow. Pace yourself and results will follow.</h3>
+
+      <%}%>
+
+    </section>
 
   </body>
 </html>

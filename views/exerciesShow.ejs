@@ -2,13 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleShow.css">
     <title></title>
   </head>
   <body>
-    <h1>hello</h1>
-    <section>
-      <h2><% showId.name %></h2>
-      <h2><% showId.Description %></h2>
+    <%- include ('./partials/head.ejs') %>
+
+    <%- include ('./partials/header.ejs') %>
+
+
+    <section id="form-section">
+      <h2><%= showId.name %></h2>
+      <h2><%=showId.Description %></h2>
+      <a href="/exercies"><button type="button" name="button">Return Home</button></a>
     </section>
 
   </body>

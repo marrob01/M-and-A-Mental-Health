@@ -2,17 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
     <title></title>
   </head>
   <body>
+    <%- include ('./partials/head.ejs') %>
+    <%- include ('./partials/header.ejs') %>
     <form action="/exercies" method="POST">
+      <fieldset>
+        <legend>New Exercise</legend>
+
         <label for="name">Name</label>
         <input type="text" name="name" />
 
         <label for="Description">Description</label>
         <input type="text" name="Description" />
 
-  
+
 
         <label for="daily">Daily</label>
         <input type="text" name="daily" />
@@ -20,6 +26,8 @@
         <br>
         <br>
         <input type="submit" value="Create Exercise" />
+      </fieldset>
+
     </form>
 
   </body>

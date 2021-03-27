@@ -5,7 +5,7 @@ const {Schema, model} = mongoose;
 const exerciseSchema = new Schema({
     name:  {type: String },
     Description: {type: String} ,
-    rating: {type: Number, min:0, max:5, default: true},
+    img: {type: String} ,
     daily: [String],
 
 }, { timestamps: true });

@@ -8,41 +8,39 @@ router.get('/form1', (req, res)=>{
 
     res.render('healthforms/form1.ejs')
 });
-//
-// let allforms= Health.find({updatedAt})
-// console.log(allforms)
-//
-//   // })
-//
-//    allforms.sort(function(a,b){
-//
-//     return new Date(b.date) - new Date(a.date);
-//   })
-//
-//     let x = data[0]
-//     console.log(data)
+
 
 router.get('/', (req, res)=>{
 
-  Health.find({}, (err, oneFormData, next) => {
-    console.log(Health.find({}))
+  const arry = Health.find({},  (err, oneFormData, next) => {
 
         if (err) {
             console.log(err)
             next(err)
-        } else {
-          console.log(oneFormData)
-          // console.log(req.body)
-
-          res.render('healthforms/healthhome.ejs', {
-            one : oneFormData
-          })
         }
+    }).sort({"createdAt":-1});
+    res.render('healthforms/healthhome.ejs',{
+      two : arry
     })
+    console.log(arry)
 
 
 });
-
+//
+// const h = Health.find({} , (err, oneFormData, next) => {
+//
+//     if (err) {
+//         console.log(err)
+//         next(err)
+//       } else {
+//           res.render('healthforms/healthhome.ejs',{
+//
+//             saved : h
+//           })
+//
+//       }
+//     }).sort({"createdAt":-1});
+//
 
 
 

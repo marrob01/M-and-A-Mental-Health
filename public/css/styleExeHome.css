@@ -4,20 +4,42 @@
   align-items: center;
   justify-content: center;
 
+
 }
-
-
 .exe-btns{
     margin:20px;
+    padding: 10px;
+    text-transform: uppercase;
+
 }
+#exe-btn button a{
+  color: inherit;
+  text-decoration: none;
 
-
+}
+.exe-btns:hover, .exe-btns:focus {
+  /* color: #fff; */
+  outline: 0;
+}
 #exe-ul{
   list-style-type: none;
   padding: 30px;
+  margin : 0 auto;
+  width:50%;
+
 }
 
-.exe-li{
-  border: 1px solid blue;
-  margin-bottom: 10px;
+#exe-ul li a{
+  color: #E8E8E8;
+  color: inherit;
+  text-decoration: none;
+}
+
+#exe-ul li a:hover{
+  text-decoration: underline;
+
+}
+
+.delete-control{
+  display:none;
 }

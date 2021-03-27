@@ -28,8 +28,7 @@ nav{
   align-items: center;
   letter-spacing: 2px;
   background-color:#c0b490;
-  padding:10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .links{
@@ -37,6 +36,8 @@ nav{
   justify-content: space-around;
   width:35%;
   color:#E8E8E8;
+  padding: 20px;
+
 }
 
 .links li{
@@ -50,4 +51,42 @@ nav{
 
 .links li a:hover, .logo a:hover {
     text-decoration: underline;
+}
+
+form{
+  width:70%;
+  margin:0 auto;
+}
+fieldset{
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 0 auto;
+  width:50%;
+
+}
+
+
+label, input{
+  display:block;
+  padding: 5px;
+  font-weight: 200;
+}
+input{
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: red);
+  box-shadow: gray 0 0  10px;
+  font-family: 'Oswald';
+  font-size: 1.4em;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #5e5d59;
+  color:whitesmoke;
 }

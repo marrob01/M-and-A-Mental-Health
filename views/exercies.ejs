@@ -20,16 +20,15 @@
     <div id="exe-btn">
       <button class="exe-btns" type="button" name="button"><a href="/exercies/new">Add New Exercise</a></button>
       <button class="exe-btns" id="delete" onclick="myFunction()">Delete</button>
-
     </div>
 
     <ul id="exe-ul">
         <% for(let i = 0; i < practice.length; i++) { %>
           <li class="exe-li"><a href="/exercies/<%=practice[i].id%>">
-            <h3>1- <%= practice[i].name %></h3><br>
+            <h3>- <%= practice[i].name %></h3><br>
             <%= practice[i].Description %><br>
-            <%= practice[i].daily %><br>
-            <a href="/exercies/<%=practice[i].id%>/edit">Edit</a>
+            -<%= practice[i].daily %><br>
+            <a href="/exercies/<%=practice[i].id%>/edit"><button type="button" name="button">Edit</button></a>
             <form method="POST" action="/exercies/<%= practice[i].id %>?_method=DELETE">
                 <button class="delete-control">Delete</button>
             </form>

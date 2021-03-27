@@ -40,11 +40,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
-// Exercise.create( exercises, ( err , data ) => {
-//       if ( err ) console.log ( err.message )
-//   console.log( "added provided exercises data" )
-//   }
-// );
+
 
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
@@ -62,10 +58,10 @@ app.use((req, res, next) =>{
 
 
 const exerciesController = require('./controller/exercies.js');
-app.use('/exercies', exerciesController);
+app.use('/exercies',isAuthenticated,  exerciesController);
 
 const userController = require('./controller/users.js');
-app.use('/users',isAuthenticated, userController);
+app.use('/users', userController);
 
 const sessionsControllers = require('./controller/sessions')
 app.use('/sessions', sessionsControllers);
@@ -80,6 +76,18 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 
 })
+
+app.get('/seed', (req, res)=> {
+
+  Exercise.create( exercises, ( err , data ) => {
+        if ( err ) console.log ( err.message )
+    console.log( "added provided exercises data" )
+    }
+  );
+
+})
+
+
 
 app.listen(PORT,()=>{
     console.log('Server is listening!!!');
