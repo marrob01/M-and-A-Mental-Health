@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Exercise = require('../models/exercies.js')
-const exercises = require('./models/seedexe.js')
+const exercises = require('../models/seedexe.js')
 
 
 
