@@ -3,6 +3,17 @@ const router = express.Router();
 
 const Exercise = require('../models/exercies.js')
 
+
+app.get('/seed', (req, res)=> {
+
+  Exercise.create( exercises, ( err , data ) => {
+        if ( err ) console.log ( err.message )
+    console.log( "added provided exercises data" )
+    }
+  );
+
+})
+
 router.get('/new', (req, res) => {
 
     res.render('newAdd.ejs', {
@@ -56,7 +67,7 @@ router.delete('/:id', (req, res) => {
         if (err) {
             console.log(err)
         } else {
-        
+
             res.redirect('/exercies')
         }
     })

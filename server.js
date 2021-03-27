@@ -77,15 +77,7 @@ app.get('/', (req, res) => {
 
 })
 
-app.get('/seed', (req, res)=> {
 
-  Exercise.create( exercises, ( err , data ) => {
-        if ( err ) console.log ( err.message )
-    console.log( "added provided exercises data" )
-    }
-  );
-
-})
 
 
 
