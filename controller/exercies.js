@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const Exercise = require('../models/exercies.js')
+const exercises = require('./models/seedexe.js')
 
 
-app.get('/seed', (req, res)=> {
+
+router.get('/seed', (req, res)=> {
 
   Exercise.create( exercises, ( err , data ) => {
         if ( err ) console.log ( err.message )
